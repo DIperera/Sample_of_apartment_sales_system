@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Test</title>
+        <link rel="stylesheet" href="login.css">
+        <link rel='stylesheet' type='text/css' media='screen' href='header.css'>
+        <script src='header.js'></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
+    </head>
+    <body>
+
+        <h1 class="header">ONLINE APARTMANT</h1>
+    <div>
+        <ul class="nav">
+            <li><a href="items.php">Home</a></li>
+            <li><a href="#">login</a></li>
+            <li><a href="#">Help</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </div>
+    <div id="mobnav">
+        <button class="menu" onclick="anim()">MENU<i class="fa-solid fa-bars"></i></button>
+        <ul class="nav2">
+            <br><br><br>
+            <li><a href="items.php">Home</a></li>
+            <li><a href="#">login</a></li>
+            <li><a href="#">Help</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </div>
+    <div id="popup">
+        <p>Congragulations!<br>You won a *#%</p>
+        <img src="images/congratulations.gif" alt="gif" class="gif">
+        <button onclick="closePopup()">Close</button>
+    </div>
+
+        <form id="login" onsubmit="validate(event)" method="POST" action="#">
+            <label for="name">Username:</label>
+            <input type="text" id="name" name="name"><br><br>
+            <label for="pass">Password:</label>
+            <input type="password" id="pass" name="pass"><br><br>
+            <button type="submit" >Send</button>
+            <div id="div1"></div>
+        </form>
+        <script src="login.js"></script>
+    </body>
+</html>

@@ -1,0 +1,102 @@
+.heading {
+    font-size: 2em;
+    padding-top: 50px;
+}
+
+.dis {
+    color: rgb(74, 73, 92);
+    margin-left: 30px;
+    margin-right: 30px;
+    background-color: rgba(188, 196, 196, 0.553);
+    padding: 20px;
+}
+
+.div1 {
+    text-align: center;
+}
+
+.ul1 {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#img {
+    width: 50px;
+    /*transform: translateY(35px);*/
+}
+
+.pp {
+    text-align: left;
+    padding-left: 0;
+}
+
+li {
+    padding: 0;
+}
+
+.ul11 {
+    display: flex
+}
+
+.follow {
+    padding: 50px;
+}
+
+form {
+    padding-left: 50px;
+}
+
+#popup {
+    background-color: rgb(234, 239, 239);
+    height: 250px;
+    width: 500px;
+    position: fixed;
+    top: 250px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 2px solid black;
+    display: none;
+
+}
+
+#popup2 {
+    background-color: rgb(234, 239, 239);
+    height: 250px;
+    width: 500px;
+    position: fixed;
+    top: 250px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 2px solid black;
+    display: none;
+
+}
+
+#popupin {
+    text-align: center;
+    margin-top: 70px;
+    padding: 20px;
+
+}
+
+#btn1 {
+    position: relative;
+    transform: translate(400px, 50px);
+}
+
+#btn2 {
+    position: relative;
+    transform: translate(0px, 50px);
+}
+
+#btn3 {
+    position: relative;
+    transform: translate(230px, 50px);
+}
+
+#form1 {
+    background-color: rgb(209, 215, 215);
+    width: 900px;
+}
