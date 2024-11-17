@@ -16,7 +16,36 @@
 
 <body>
 
-    <h1 class="header">ONLINE APARTMANT</h1>
+<?php 
+session_start();
+$username = "";
+
+if (isset($_SESSION["username"])) {
+    echo'
+<h1 class="header">ONLINE APARTMANT</h1>
+    <div>
+        <ul class="nav">
+            <li><a href="items.php">Home</a></li>
+            <li><a href="apartment_listing">LIST</a></li>
+            <li><a href="logout.php">logout</a></li>
+            <li><a href="#">Help</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </div>
+    <div id="mobnav">
+        <button class="menu" onclick="anim()">MENU<i class="fa-solid fa-bars"></i></button>
+        <ul class="nav2">
+            <br><br><br>
+            <li><a href="items.php">Home</a></li>
+            <li><a href="apartment_listing">LIST</a></li>
+            <li><a href="logout.php">logout</a></li>
+            <li><a href="#">Help</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </div>';
+}else{
+        echo'
+<h1 class="header">ONLINE APARTMANT</h1>
     <div>
         <ul class="nav">
             <li><a href="items.php">Home</a></li>
@@ -34,7 +63,10 @@
             <li><a href="#">Help</a></li>
             <li><a href="#">Contact Us</a></li>
         </ul>
-    </div>
+    </div>';
+    }
+
+    ?>
     <div id="popup">
         <p>Congragulations!<br>You won a *#%</p>
         <img src="images/congratulations.gif" alt="gif" class="gif">
@@ -73,7 +105,7 @@
         </div>
         <div class="follow">Follow us:</div>
     </div>
-    <form id="form1" onsubmit="return validateForm()" method="post" action="contact.php">
+    <form id="form1" onsubmit="validateForm(event)" method="post" action="contact.php">
         <br>
         <p>Drop a message</p>
         <label for="name">Name</label>
@@ -85,9 +117,10 @@
         <label for="message">Message</label><br>
         <textarea id="message" style="width: 450px; height: 150px;" placeholder="Your message..."></textarea><br><br>
         <button type="submit">Send</button>
+        <div id="error"></div>
         <br><br>
     </form>
-    <div id="popup">
+    <div id="popup1">
         <div id="popupin">This website protect your privacy and ensure to protect your credentials. Do you want to
             conform your request?</div>
         <button id="btn1" onclick="popup2()">OK</button>

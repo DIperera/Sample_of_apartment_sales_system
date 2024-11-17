@@ -37,6 +37,11 @@ $result = $con->query("SELECT * FROM items");
 <html>
 <head>
     <title>Admin Panel</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='header.css'>
+    <script src='header.js'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         #list{
             width: 35px;
@@ -44,6 +49,63 @@ $result = $con->query("SELECT * FROM items");
     </style>
 </head>
 <body>
+
+<?php 
+session_start();
+$username = "";
+
+if (isset($_SESSION["username"])) {
+    echo'
+<h1 class="header">ONLINE APARTMANT</h1>
+    <div>
+        <ul class="nav">
+            <li><a href="items.php">Home</a></li>
+            <li><a href="#">LIST</a></li>
+            <li><a href="logout.php">logout</a></li>
+            <li><a href="#">Help</a></li>
+            <li><a href="contact1.php">Contact Us</a></li>
+        </ul>
+    </div>
+    <div id="mobnav">
+        <button class="menu" onclick="anim()">MENU<i class="fa-solid fa-bars"></i></button>
+        <ul class="nav2">
+            <br><br><br>
+            <li><a href="items.php">Home</a></li>
+            <li><a href="#">LIST</a></li>
+            <li><a href="logout.php">logout</a></li>
+            <li><a href="#">Help</a></li>
+            <li><a href="contact1.php">Contact Us</a></li>
+        </ul>
+    </div>';
+}else{
+        echo'
+<h1 class="header">ONLINE APARTMANT</h1>
+    <div>
+        <ul class="nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="login.html">login</a></li>
+            <li><a href="#">Help</a></li>
+            <li><a href="contact1.php">Contact Us</a></li>
+        </ul>
+    </div>
+    <div id="mobnav">
+        <button class="menu" onclick="anim()">MENU<i class="fa-solid fa-bars"></i></button>
+        <ul class="nav2">
+            <br><br><br>
+            <li><a href="#">Home</a></li>
+            <li><a href="login.html">login</a></li>
+            <li><a href="#">Help</a></li>
+            <li><a href="contact1.php">Contact Us</a></li>
+        </ul>
+    </div>';
+    }
+
+    ?>
+    <div id="popup">
+        <p>Congragulations!<br>You won a *#%</p>
+        <img src="images/congratulations.gif" alt="gif" class="gif">
+        <button onclick="closePopup()">Close</button>
+    </div>
 
 <h2>Add New Item</h2>
 <form method="POST">

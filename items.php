@@ -1,4 +1,5 @@
 <?php
+
 $con = new mysqli("localhost", "root", "", "database1");
 $result = $con->query("SELECT * FROM items");
 ?>
@@ -16,13 +17,42 @@ $result = $con->query("SELECT * FROM items");
 </head>
 <body>
  
+<?php 
+session_start();
+$username = "";
+
+if (isset($_SESSION["username"])) {
+    echo'
+<h1 class="header">ONLINE APARTMANT</h1>
+    <div>
+        <ul class="nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="apartment_listing">LIST</a></li>
+            <li><a href="logout.php">logout</a></li>
+            <li><a href="#">Help</a></li>
+            <li><a href="contact1.php">Contact Us</a></li>
+        </ul>
+    </div>
+    <div id="mobnav">
+        <button class="menu" onclick="anim()">MENU<i class="fa-solid fa-bars"></i></button>
+        <ul class="nav2">
+            <br><br><br>
+            <li><a href="#">Home</a></li>
+            <li><a href="apartment_listing">LIST</a></li>
+            <li><a href="logout.php">logout</a></li>
+            <li><a href="#">Help</a></li>
+            <li><a href="contact1.php">Contact Us</a></li>
+        </ul>
+    </div>';
+}else{
+        echo'
 <h1 class="header">ONLINE APARTMANT</h1>
     <div>
         <ul class="nav">
             <li><a href="#">Home</a></li>
             <li><a href="login.html">login</a></li>
             <li><a href="#">Help</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="contact1.php">Contact Us</a></li>
         </ul>
     </div>
     <div id="mobnav">
@@ -32,9 +62,12 @@ $result = $con->query("SELECT * FROM items");
             <li><a href="#">Home</a></li>
             <li><a href="login.html">login</a></li>
             <li><a href="#">Help</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="contact1.php">Contact Us</a></li>
         </ul>
-    </div>
+    </div>';
+    }
+
+    ?>
     <div id="popup">
         <p>Congragulations!<br>You won a *#%</p>
         <img src="images/congratulations.gif" alt="gif" class="gif">
