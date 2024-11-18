@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if ($action == 'add') {
 
-        $con->query("INSERT INTO items (image, price, description, overview_page, bedrooms, bathrooms, sqft) VALUES ('$image', '$price', '$description', '$overview_page', '$bedrooms', '$bathrooms', '$sqft')");
+        $con->query("INSERT INTO items (image, price, description, overview_page, bedrooms, bathrooms, sqft) VALUES ('$image', '$price', '$description', '$overview_page', '$bedrooms', '$bath', '$sqft')");
     
     } elseif ($action == 'update') {
         

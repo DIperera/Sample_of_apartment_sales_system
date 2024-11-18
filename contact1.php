@@ -26,7 +26,7 @@ if (isset($_SESSION["username"])) {
     <div>
         <ul class="nav">
             <li><a href="items.php">Home</a></li>
-            <li><a href="apartment_listing">LIST</a></li>
+            <li><a href="apartment_listing.php">LIST</a></li>
             <li><a href="logout.php">logout</a></li>
             <li><a href="#">Help</a></li>
             <li><a href="#">Contact Us</a></li>
@@ -37,7 +37,7 @@ if (isset($_SESSION["username"])) {
         <ul class="nav2">
             <br><br><br>
             <li><a href="items.php">Home</a></li>
-            <li><a href="apartment_listing">LIST</a></li>
+            <li><a href="apartment_listing.php">LIST</a></li>
             <li><a href="logout.php">logout</a></li>
             <li><a href="#">Help</a></li>
             <li><a href="#">Contact Us</a></li>
